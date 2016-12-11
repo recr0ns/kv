@@ -1,16 +1,14 @@
-# Kv
+# KV
 
-**TODO: Add description**
+[E]Redis wrapper
 
 ## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
   1. Add `kv` to your list of dependencies in `mix.exs`:
 
     ```elixir
     def deps do
-      [{:kv, "~> 0.1.0"}]
+      [{:kv, github: "recr0ns/kv"}]
     end
     ```
 
@@ -22,3 +20,14 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     end
     ```
 
+  3. Config sample
+
+    ```elixir
+    config :kv, :redis,
+      pool_size: 10,
+      max_overflow: 5,
+      host: '127.0.0.1',
+      port: 6379,
+      database: 1,
+      timeout: 5000
+    ```
